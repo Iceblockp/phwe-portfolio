@@ -71,9 +71,9 @@ export function Projects() {
                 alt={project.title}
                 width={300}
                 height={400}
-                className="rounded-lg object-cover w-full aspect-[4/3]"
+                className=" object-cover w-full aspect-[4/3]"
               />
-              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
+              {/* <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
                 <div className="text-center text-white p-6">
                   <h3 className="font-bold text-xl mb-2 leading-5">
                     {project.title}
@@ -89,6 +89,25 @@ export function Projects() {
                     className="text-white border-white bg-pink-500 hover:bg-white hover:text-black"
                   >
                     View More
+                  </Button>
+                </div>
+              </div> */}
+              <div>
+                <div className=" text-black p-6">
+                  <h3 className="font-bold text-xl mb-2 leading-5">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-700 mb-4 text-xs">
+                    {project.category}
+                  </p>
+                  <p className="text-gray-800 mb-4  text-sm">
+                    {project.description}
+                  </p>
+                  <Button
+                    variant="outline"
+                    className="text-white bg-gradient-to-br from-firstGradient to-secondGradient hover:text-white w-full rounded-none "
+                  >
+                    View Detail
                   </Button>
                 </div>
               </div>

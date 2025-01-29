@@ -26,7 +26,7 @@ export function Footer() {
       <div className="container mx-auto">
         <div className="flex flex-col items-center gap-8">
           <ProfileLogo />
-          <nav className="flex gap-8">
+          <nav className=" hidden sm:flex gap-8">
             <Link href="/" className="text-sm font-medium hover:text-pink-500">
               Home
             </Link>

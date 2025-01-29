@@ -14,6 +14,8 @@ export default {
           "rgba(13, 22, 25, 0.16) 0px 0px 32px 0px, rgb(229, 229, 229) 0px -1px 0px 0px",
       },
       colors: {
+        firstGradient: "#F563C4",
+        secondGradient: "#D370F4",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

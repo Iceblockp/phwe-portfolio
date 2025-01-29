@@ -35,8 +35,8 @@ export function Hero() {
         <div className=" flex justify-center md:justify-end">
           <div>
             <div className="relative">
-              <div className=" size-[540px] rounded-full border-[12px] border-pink-200 absolute bottom-0 -z-10 "></div>
-              <div className=" w-[540px] h-[660px] rounded-b-[270px] border-[12px] border-transparent border-b-pink-200 overflow-hidden">
+              <div className=" w-full aspect-square sm:size-[540px] rounded-full border-[12px] border-pink-200 absolute bottom-0 -z-10 "></div>
+              <div className=" w-full aspect-[5/6] sm:w-[540px] sm:h-[660px] rounded-b-[270px] border-[12px] border-transparent border-b-pink-200 overflow-hidden">
                 <Image
                   src={`/img/profile1.png`}
                   alt="Profile"

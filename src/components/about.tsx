@@ -13,7 +13,7 @@ export function About() {
     <section id="about" className="py-20 px-4 md:px-6 bg-gray-50">
       <div className="container mx-auto grid md:grid-cols-2 gap-16 items-center">
         <div className="relative flex justify-center md:justify-start">
-          <div className="aspect-square w-[400px] rounded-full overflow-hidden border-[12px] border-pink-100">
+          <div className="aspect-square w-full sm:w-[400px] rounded-full overflow-hidden border-[12px] border-pink-100">
             <Image
               src={`/img/profile2.png`}
               alt="About"
