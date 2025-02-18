@@ -1,27 +1,59 @@
-import { Monitor, Smartphone, Brain, Layout } from "lucide-react";
+import Image from "next/image";
 
 export function Services() {
   const services = [
     {
-      icon: <Layout className="size-8" />,
+      icon: (
+        <Image
+          src={"/img/ui-ux.png"}
+          alt="ui"
+          width={400}
+          height={300}
+          className="size-8"
+        />
+      ),
       title: "UI/UX",
       description:
         "UI/UX design focused on research, wireframing, and prototyping for seamless experiences",
     },
     {
-      icon: <Monitor className="size-8" />,
+      icon: (
+        <Image
+          src={"/img/web-design.png"}
+          alt="web"
+          width={400}
+          height={300}
+          className="size-8"
+        />
+      ),
       title: "Web Design",
       description:
         "I design responsive, user-friendly websites that combine functionality and aesthetics",
     },
     {
-      icon: <Smartphone className="size-8" />,
+      icon: (
+        <Image
+          src={"/img/app-icon.png"}
+          alt="app"
+          width={400}
+          height={300}
+          className="size-8"
+        />
+      ),
       title: "App Design",
       description:
         "I create intuitive and visually engaging app designs focused on enhancing user experience",
     },
     {
-      icon: <Brain className="size-8" />,
+      icon: (
+        <Image
+          src={"/img/ai.png"}
+          alt="ai"
+          width={400}
+          height={300}
+          className="size-8"
+        />
+      ),
       title: "AI",
       description:
         "I provide AI-driven design solutions for intuitive and user-focused digital experiences",

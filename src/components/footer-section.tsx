@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
+import BehanceIcon from "./icons/BehanceIcon";
 
 const ProfileLogo = () => {
   return (
@@ -56,21 +57,33 @@ export function Footer() {
             </Link>
           </nav>
           <div className="flex gap-6">
-            <Link href="#" className="text-gray-600 hover:text-pink-500">
+            <Link
+              href="https://www.facebook.com/h.phwe.5"
+              className="text-gray-600 hover:text-pink-500"
+            >
               <Facebook className="size-6" />
             </Link>
-            <Link href="#" className="text-gray-600 hover:text-pink-500">
-              <Twitter className="size-6" />
+            <Link
+              href="https://www.behance.net/phwephwe2"
+              className="text-gray-600 hover:text-pink-500"
+            >
+              <BehanceIcon className=" size-6 fill-gray-600 hover:fill-pink-500" />
             </Link>
-            <Link href="#" className="text-gray-600 hover:text-pink-500">
+            <Link
+              href="https://www.instagram.com/hninshwesinphwe/"
+              className="text-gray-600 hover:text-pink-500"
+            >
               <Instagram className="size-6" />
             </Link>
-            <Link href="#" className="text-gray-600 hover:text-pink-500">
+            <Link
+              href="https://www.linkedin.com/in/hnin-shwe-sin-phwe-14090926a/"
+              className="text-gray-600 hover:text-pink-500"
+            >
               <Linkedin className="size-6" />
             </Link>
           </div>
           <p className="text-sm text-gray-600">
-            © 2024 Portfolio. All Rights Reserved.
+            © 2024 HSSP. All Rights Reserved.
           </p>
         </div>
       </div>

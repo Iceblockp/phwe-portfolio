@@ -4,13 +4,22 @@ import { useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
-const projects = [
+type Project = {
+  title: string;
+  category: "App Design" | "Web Design" | "Solution Design";
+  description: string;
+  image: string;
+  link: string;
+};
+
+const projects: Project[] = [
   {
     title: "Food Delivery App",
     category: "App Design",
     description:
       "A food delivery app offering quick, easy ordering, real-time tracking, and a wide range of restaurant options, bringing delicious meals straight to your doorstep",
     image: "/img/food-delivery.png",
+    link: "https://www.figma.com/design/2vvoLTIt8x3b3ZjScXF9tn/PROJECT?node-id=676-2&t=x4e6nwqayApU37D6-1",
   },
   {
     title: "E-Learning (Eduo)",
@@ -18,6 +27,7 @@ const projects = [
     description:
       "Eduo is an e-learning platform offering interactive courses, personalized learning paths, and engaging tools to enhance skill development and education.",
     image: "/img/e-learning.png",
+    link: "https://www.figma.com/design/2vvoLTIt8x3b3ZjScXF9tn/PROJECT?node-id=475-2751&t=x4e6nwqayApU37D6-1",
   },
   {
     title: "Solution for food delivery app",
@@ -25,6 +35,119 @@ const projects = [
     description:
       "A food delivery app solution with real-time tracking, seamless payments, and user-friendly interfaces for customers and partners",
     image: "/img/solution.png",
+    link: "https://www.figma.com/board/yAxb1Nc4iTfXbDR65uVhPs/solution-for-food-order-app?node-id=0-1&t=LELUbMqPcxYAte4X-1",
+  },
+  {
+    title: "Mizzle (Reference)",
+    category: "Web Design",
+    description:
+      "A creative studio specializing in innovative design solutions, combining art and strategy to deliver unique branding, digital experiences, and impactful visuals.",
+    image: "/img/mizzle.png",
+    link: "https://www.figma.com/design/2vvoLTIt8x3b3ZjScXF9tn/PROJECT?node-id=869-2&t=x4e6nwqayApU37D6-1",
+  },
+  {
+    title: "Typography practise",
+    category: "Web Design",
+    description:
+      "An IT service company website showcasing innovative solutions, expert consulting, and cutting-edge technologies to drive business growth and digital transformation.",
+    image: "/img/typography.png",
+    link: "https://www.figma.com/design/2vvoLTIt8x3b3ZjScXF9tn/PROJECT?node-id=3-4183&t=x4e6nwqayApU37D6-1",
+  },
+  {
+    title: "Color theory practise",
+    category: "Web Design",
+    description:
+      "A color theory practice involves exploring color combinations, contrasts, and harmonies to enhance design aesthetics and create visually impactful compositions.",
+    image: "/img/color-theory.png",
+    link: "https://www.figma.com/design/2vvoLTIt8x3b3ZjScXF9tn/PROJECT?node-id=3-585&t=x4e6nwqayApU37D6-1",
+  },
+  {
+    title: "Real Estate",
+    category: "Web Design",
+    description:
+      "Sky Star is a real estate platform offering seamless property searches, detailed listings, and expert guidance to help you find your dream home or investment.",
+    image: "/img/real-estate.png",
+    link: "https://www.figma.com/design/2vvoLTIt8x3b3ZjScXF9tn/PROJECT?node-id=676-13884&t=x4e6nwqayApU37D6-1",
+  },
+  {
+    title: "Pathway Academy (LMS)",
+    category: "Web Design",
+    description:
+      "Pathway Academy is an LMS offering seamless tools for interactive learning, personalized dashboards, and efficient education management.",
+    image: "/img/pathway.png",
+    link: "https://www.figma.com/design/2vvoLTIt8x3b3ZjScXF9tn/PROJECT?node-id=828-2&t=x4e6nwqayApU37D6-1",
+  },
+  {
+    title: "Moana",
+    category: "Web Design",
+    description:
+      "A personal website for Moana, showcasing her journey, achievements, and passion for exploration, with an engaging design that reflects her adventurous spirit",
+    image: "/img/moana.png",
+    link: "https://www.figma.com/design/2vvoLTIt8x3b3ZjScXF9tn/PROJECT?node-id=842-8321&t=x4e6nwqayApU37D6-1",
+  },
+  {
+    title: "Food delivery (CMS)",
+    category: "Web Design",
+    description:
+      "A food delivery CMS website offering seamless order management, real-time tracking, and an intuitive interface for restaurants and customers.",
+    image: "/img/food-cms.png",
+    link: "https://www.figma.com/design/2vvoLTIt8x3b3ZjScXF9tn/PROJECT?node-id=676-3588&t=x4e6nwqayApU37D6-1",
+  },
+  {
+    title: "Diet Plan",
+    category: "Web Design",
+    description:
+      "A diet plan website providing personalized meal plans, nutrition tips, and expert guidance to help you achieve your health and fitness goals",
+    image: "/img/diet.png",
+    link: "https://www.figma.com/design/2vvoLTIt8x3b3ZjScXF9tn/PROJECT?node-id=0-1&t=x4e6nwqayApU37D6-1",
+  },
+  {
+    title: "Mart Web",
+    category: "Web Design",
+    description:
+      "Mart is a versatile e-commerce platform offering a wide range of products with an intuitive shopping experience, secure payments, and fast delivery",
+    image: "/img/mart.png",
+    link: "https://www.figma.com/design/2vvoLTIt8x3b3ZjScXF9tn/PROJECT?node-id=676-14323&t=x4e6nwqayApU37D6-1",
+  },
+  {
+    title: "Shop Website",
+    category: "Web Design",
+    description:
+      "A decorative furniture shop website offering stylish, high-quality furniture pieces to elevate your home decor, blending elegance with functionality.",
+    image: "/img/shop.png",
+    link: "https://www.figma.com/design/2vvoLTIt8x3b3ZjScXF9tn/PROJECT?node-id=1-1167&t=x4e6nwqayApU37D6-1",
+  },
+  {
+    title: "Sushi",
+    category: "Web Design",
+    description:
+      "A sushi website showcasing a diverse menu of fresh and authentic sushi, with easy online ordering, exclusive deals, and fast delivery",
+    image: "/img/sushi.png",
+    link: "https://www.figma.com/design/2vvoLTIt8x3b3ZjScXF9tn/PROJECT?node-id=1-955&t=x4e6nwqayApU37D6-1",
+  },
+  {
+    title: "Furniture App",
+    category: "App Design",
+    description:
+      "A furniture app offering a wide range of stylish and functional furniture, complete with AR visualization, easy navigation, and secure purchasing options",
+    image: "/img/furniture.png",
+    link: "https://www.figma.com/design/2vvoLTIt8x3b3ZjScXF9tn/PROJECT?node-id=754-2&t=x4e6nwqayApU37D6-1",
+  },
+  {
+    title: "Food App",
+    category: "App Design",
+    description:
+      "A food app offering quick and easy access to local restaurants, menu browsing and menu detail for a convenient dining experience.",
+    image: "/img/food-app.png",
+    link: "https://www.figma.com/design/2vvoLTIt8x3b3ZjScXF9tn/PROJECT?node-id=3-4182&t=x4e6nwqayApU37D6-1",
+  },
+  {
+    title: "Footwear App",
+    category: "App Design",
+    description:
+      "A footwear app offering a wide range of stylish shoes, easy browsing, secure purchases, and personalized recommendations for the perfect fi",
+    image: "/img/footwear.png",
+    link: "https://www.figma.com/design/2vvoLTIt8x3b3ZjScXF9tn/PROJECT?node-id=3-2255&t=x4e6nwqayApU37D6-1",
   },
   // Add more projects as needed
 ];
@@ -94,18 +217,19 @@ export function Projects() {
               </div> */}
               <div>
                 <div className=" text-black p-6">
-                  <h3 className="font-bold text-xl mb-2 leading-5">
+                  <h3 className="font-bold text-xl mb-2 leading-5 line-clamp-1">
                     {project.title}
                   </h3>
                   <p className="text-gray-700 mb-4 text-xs">
                     {project.category}
                   </p>
-                  <p className="text-gray-800 mb-4  text-sm">
+                  <p className="text-gray-800 mb-4  text-sm line-clamp-4">
                     {project.description}
                   </p>
                   <Button
                     variant="outline"
                     className="text-white bg-gradient-to-br from-firstGradient to-secondGradient hover:text-white w-full rounded-none "
+                    onClick={() => window.open(project.link, "_blank")}
                   >
                     View Detail
                   </Button>

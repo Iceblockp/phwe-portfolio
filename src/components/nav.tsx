@@ -36,6 +36,13 @@ export function Nav() {
     { href: "#contact", label: "Contact" },
   ];
 
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = `/file/my-cv.pdf`; // Path to your PDF file in the public folder
+    link.download = "CV.pdf"; // Desired file name
+    link.click();
+  };
+
   return (
     <nav className="py-3 px-6 sticky top-0 z-20 h-[88px] bg-white border-b flex items-center justify-between">
       <Link href="/" className="flex items-center gap-2">
@@ -57,6 +64,7 @@ export function Nav() {
       <Button
         variant="default"
         className=" bg-gradient-to-br from-firstGradient to-secondGradient hidden lg:block  px-6"
+        onClick={() => handleDownload()}
       >
         Download CV
       </Button>
@@ -83,6 +91,7 @@ export function Nav() {
             <Button
               variant="default"
               className=" bg-gradient-to-br from-firstGradient to-secondGradient px-6 mt-4"
+              onClick={() => handleDownload()}
             >
               Download CV
             </Button>
